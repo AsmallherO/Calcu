@@ -1,0 +1,68 @@
+﻿<Window x:Class="GruntTestRosNeft.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GruntTestRosNeft"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TextBlock x:Name="TBCount" TextAlignment="Right" Margin="330,2,10,56" Grid.Column="2" RenderTransformOrigin="0.5,0.5">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="-0.404"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-0.567"/>
+                </TransformGroup>
+            </TextBlock.RenderTransform></TextBlock>
+        <ComboBox x:Name="Grunt1" Text="Тип Грунта" VerticalAlignment="Center" Grid.Column="1" AutomationProperties.Name="" Height="22" Margin="10,0,10,0" SelectionChanged="Grunt1_SelectionChanged" >
+            <Label  Content="Пески разных фракций"/>
+            <Label  Content="Супеси и пылеватые пески"/>
+            <Label  Content="Суглинок"/>
+            <Label  Content="Глины"/>
+            <Label  Content="Торф слобразложившийся"/>
+            <Label  Content="Торф среднеразложившийся"/>
+        </ComboBox>
+        <ComboBox x:Name="Grunt2" Margin="10,23,10,0" Grid.Row="1" VerticalAlignment="Top" Grid.Column="1" Height="22">
+            <Label  Content="Незасоленный"/>
+            <Label  Content="Засоленный(морской тип)"/>
+            <Label  Content="Засоленный(континентальный тип)"/>
+        </ComboBox>
+        <Label Content="Тип грунта" HorizontalAlignment="Center" FontSize="10" VerticalAlignment="Center" Height="30" Width="149"/>
+        <Label Content="Засоленность грунта" HorizontalAlignment="Left" FontSize="10" Margin="0,19,0,0" Grid.Row="1" Height="30" VerticalAlignment="Top" Width="139"/>
+        <Label Content="Степень засоленности Dsal" HorizontalAlignment="Center" FontSize="10" Grid.Row="2" VerticalAlignment="Top" Width="149" Height="27" Margin="0,9,0,0"/>
+        <TextBox x:Name="Box1" Grid.Column="1" Grid.Row="2" TextWrapping="Wrap"  BorderThickness="0.5"  VerticalAlignment="Top" Margin="25,11,5,0" Height="17"/>
+        <TextBox x:Name="Box2" Grid.Column="1" Grid.Row="2" TextWrapping="Wrap"  BorderThickness="0.5"  VerticalAlignment="Top" Margin="25,46,5,0" Height="17"/>
+        <TextBox x:Name="Box3" Grid.Column="1" Grid.Row="2" TextWrapping="Wrap"  BorderThickness="0.5"  VerticalAlignment="Top" Margin="25,76,5,0" Height="17"/>
+        <TextBox x:Name="Box4" Grid.Column="1" Grid.Row="2" TextWrapping="Wrap"  BorderThickness="0.5"  VerticalAlignment="Top" Margin="25,100,5,0" Height="17"/>
+        <Label Content="Льдистость ltot" HorizontalAlignment="Center" FontSize="10" Grid.Row="2" VerticalAlignment="Top" Width="149" Height="27" Margin="0,41,0,0"/>
+        <Label Content="Суммарная влажность Wtot" HorizontalAlignment="Center" FontSize="10" Grid.Row="2" VerticalAlignment="Top" Width="149" Height="27" Margin="0,71,0,0"/>
+        <Label Content="Влажность мерзлого грунта Wm" HorizontalAlignment="Left" FontSize="10" Grid.Row="2" VerticalAlignment="Top" Width="168" Height="27" Margin="0,95,0,0" Grid.ColumnSpan="2"/>
+        <Button Content="Расчитать" HorizontalAlignment="Left" Margin="74,12,0,0" Grid.Row="4" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="155" Height="20" Click="Button_Click_1"/>
+        <Button Content="Сохранить" HorizontalAlignment="Center" Margin="0,12,0,0" Grid.Row="4" VerticalAlignment="Top" Width="155" Grid.Column="2" Click="Button_Click" Height="20"/>
+        <ListView x:Name="List" Grid.Column="2" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="10,60,10,1" Grid.RowSpan="3">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn DisplayMemberBinding="{Binding Name}" Header="Название"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Value}" Header="Значение"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Data}" Header="Дата"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <TextBox x:Name="BoxName" Grid.Column="1" Grid.Row="2" TextWrapping="Wrap"  BorderThickness="0.5"  VerticalAlignment="Top" Margin="25,132,5,0" Height="17"/>
+        <Label Content="Название Расчета" HorizontalAlignment="Left" FontSize="10" Grid.Row="2" VerticalAlignment="Top" Width="168" Height="27" Margin="0,127,0,0" Grid.ColumnSpan="2"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="29*"></RowDefinition>
+            <RowDefinition Height="29*"></RowDefinition>
+            <RowDefinition Height="55*"></RowDefinition>
+            <RowDefinition Height="3*"></RowDefinition>
+            <RowDefinition Height="29*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="149"></ColumnDefinition>
+            <ColumnDefinition Width="160*"></ColumnDefinition>
+            <ColumnDefinition Width="491*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+    </Grid>
+</Window>

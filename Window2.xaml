@@ -1,0 +1,18 @@
+﻿<Window x:Class="GruntTestRosNeft.Window2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GruntTestRosNeft"
+        mc:Ignorable="d"
+        Title="Среднеразложившийся торф" Height="151" Width="354">
+    <Grid Margin="0,0,0,-6">
+        <Label Content="3,50" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Width="48"/>
+        <Label Content="0,90" HorizontalAlignment="Left" Margin="10,72,0,0" VerticalAlignment="Top" Width="48"/>
+        <Label Content="Wtot, доли единицы" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="134"/>
+        <Label Content="-0,13" HorizontalAlignment="Left" Margin="172,41,0,0" VerticalAlignment="Top" Width="86"/>
+        <Label Content="-0,20" HorizontalAlignment="Left" Margin="172,72,0,0" VerticalAlignment="Top" Width="86"/>
+        <Label Content="Tbf" HorizontalAlignment="Left" Margin="172,10,0,0" VerticalAlignment="Top" Width="148"/>
+
+    </Grid>
+</Window>
